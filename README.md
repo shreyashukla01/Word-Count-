@@ -16,8 +16,8 @@ com.google.common.collect - For Lists.partition() fuunction which partitions the
 
 java.time - For calculating the elapsed time for reading the text file, execution of threads and total execution time.
 
-For reading the data, BufferedReader and single thread is used as it is faster to read data sequentially. First the data is read fully and then the threads are created for evaluating each partition of the data.
+For reading the data, BufferedReader and single thread is used as it is faster to read data sequentially. First whole data is read and lines are stored in an ArrayList. After that the list is partitioned and different threads are created for evaluating each partition of the data.
 
-However if the data is very large, it can be read in chunks and each chunk can be processed immediately after it is read without waiting for other chunks to be read.
+However if the data is very large, it can be read in chunks and each chunk can be processed immediately after it is read without waiting for the remaining data to be read.
 
 
