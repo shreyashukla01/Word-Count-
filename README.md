@@ -1,7 +1,7 @@
 # Word-Count in JAVA
 Simple JAVA program that counts words from a text document
 
-The code follows a multithreaded architecture and with the help of JAVA thread pool size of 3, counts the no of different words from different partition of data.
+The code follows a multithreaded architecture and with the help of JAVA threads, counts the no of different words from different partition of data. The size of the partition determines the no of threads created.
 
 Each thread: 
 1. Finds all the words and the no of times it appears in particular partition.
