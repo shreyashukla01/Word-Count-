@@ -12,7 +12,12 @@ Then it creates a csv for all the words present in the text document and their c
 
 Some important packages used are:
 
-com.google.common.collect - For Lists.partition() fuunction which partitions the lines
+com.google.common.collect - For Lists.partition() fuunction which partitions the list of lines
 
-java.time - For calculating the elapsed time
+java.time - For calculating the elapsed time for reading the text file, execution of threads and total execution time.
+
+For reading the data, BufferedReader and single thread is used as it is faster to read data sequentially. First the data is read fully and then the threads are created for evaluating each partition of the data.
+
+However if the data is very large, it can be read in chunks and each chunk can be processed immediately after it is read without waiting for other chunks to be read.
+
 
